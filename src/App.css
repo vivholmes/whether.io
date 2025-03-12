@@ -16,16 +16,6 @@ body {
   padding: 10px;
 }
 
-.top-bar,
-.page-content,
-.input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-}
-
 .page-content {
   flex-grow: 1;
   gap: 10px;
@@ -45,14 +35,6 @@ body {
   flex-direction: column;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
 .display-container, .graph-container {
   height: 100%;
   width: 100%;
@@ -63,11 +45,6 @@ body {
   margin: 0;
   padding-left: 10px;
   font-size: 30px;
-}
-
-.date-header {
-  height: 40px;
-  margin: 10px;
 }
 
 hr {
@@ -119,24 +96,17 @@ button:active {
   height: 100%;
 }
 
-.weather-info p {
-  display: flex;
-  flex-direction: column;
+p {
   margin: 0;
-  justify-content: center;
-  align-items: flex-start;
+}
+
+.sub-header {
+  height: 40px;
+  margin: 10px;
 }
 
 .medium-text {
   font-size: 24px;
-}
-
-.horizontal {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 .icon {
@@ -154,4 +124,53 @@ button:active {
 .x-axis-title {
   font-size: 18px;
   padding-top: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-10 {
+  gap: 10px;
+} 
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.full-wh {
+  width: 100%;
+  height: 100%;
+}
+
+.space-btwn-h {
+  justify-content: space-between;
+  align-items: center;
 }

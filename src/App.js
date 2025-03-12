@@ -335,7 +335,7 @@ export default function App() {
   return (
     <div className="app">
       {/* logo, settings */}
-      <div className="top-bar">
+      <div className="top-bar flex-row no-margin space-btwn-h">
         <h3 className="app-name">whether.io</h3>
         {isMobile ? (
           <div className="settings">
@@ -352,7 +352,7 @@ export default function App() {
             </Menu>
           </div>
         ) : (
-          <div className="settings">
+          <div>
             <button>help</button>
             <button>sign out</button>
           </div>
@@ -360,17 +360,17 @@ export default function App() {
       </div>
 
       {/* full page */}
-      <div className="page-content">
+      <div className="page-content flex-row no-margin space-btwn-h">
         {/* back arrow */}
         {/* <button className="arrow">
           <ArrowBackIosRounded />
         </button> */}
 
         {/* main content */}
-        <div className="main-content">
+        <div className="flex-col center full-wh">
           <div
             className={
-              isMobile ? "input-container mobile-view" : "input-container"
+              isMobile ? "input-container flex-row no-margin space-btwn-h mobile-view" : "flex-row no-margin space-btwn-h input-container"
             }
           >
             <Box
@@ -445,10 +445,10 @@ export default function App() {
           <hr />
           <div id={isMobile ? "output-container mobile-view" : "output-container"}>
             <div className="display-container">
-              <h1 className="date-header">This {dayNames[day.getDay()]} the {day.getDate()}</h1>
-              <div className="horizontal">
+              <h1 className="sub-header">This {dayNames[day.getDay()]} the {day.getDate()}</h1>
+              <div className="flex-row center gap-20">
                 <img className="icon" src={`/icons/${displayValues["date1"].icon}.png`} alt="weathericon" />
-                <div className="weather-info">
+                <div className="flex-col no-margin flex-start">
                   <p className="medium-text">{displayValues["date1"].conditions}, {displayValues["date1"].temperature}&deg;F</p>
                   <p className="small-text">winds: {displayValues["date1"].windSpeed} mph</p>
                   <p className="small-text">{displayValues["date1"].precipProb} % chance of {displayValues["date1"].precipType}</p>
@@ -459,10 +459,10 @@ export default function App() {
               </div>
             </div>
             <div className="display-container">
-              <h1 className="date-header">Next {dayNames[day.getDay()]} the {new Date(new Date(day).setDate(new Date(day).getDate() + 7)).getDate()}</h1>
-              <div className="horizontal">
+              <h1 className="sub-header">Next {dayNames[day.getDay()]} the {new Date(new Date(day).setDate(new Date(day).getDate() + 7)).getDate()}</h1>
+              <div className="flex-row center gap-20">
                 <img className="icon" src={`/icons/${displayValues["date2"].icon}.png`} alt="weathericon" />
-                <div className="weather-info">
+                <div className="flex-col no-margin flex-start">
                   <p className="medium-text">{displayValues["date2"].conditions}, {displayValues["date2"].temperature}&deg;F</p>
                   <p className="small-text">winds: {displayValues["date2"].windSpeed} mph</p>
                   <p className="small-text">{displayValues["date2"].precipProb} % chance of {displayValues["date2"].precipType}</p>
