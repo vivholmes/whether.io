@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+body {
+  color: navy;
+  font-family: 'Nunito', sans-serif;
+  background-color: rgba(30, 30, 106, 0.509);
+  height: 100%;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: rgb(240, 242, 250);
+  border-radius: 5px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-bar,
+.page-content,
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-content {
+  flex-grow: 1;
+  gap: 10px;
+  padding: 5px;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  width: 100%;
+  gap: 15px;
+}
+
+.mobile-view {
+  flex-direction: column;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.display-container, .graph-container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.app-name {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 30px;
+}
+
+.date-header {
+  height: 40px;
+  margin: 10px;
+}
+
+hr {
+  width: 100%;
+  color: gray;
+}
+
+button,
+input {
+  padding: 10px;
+  margin: 0;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: medium;
+  color: navy;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 128, 0.397);
+}
+button:active {
+  background-color: rgba(0, 0, 128, 0.561);
+}
+
+.arrow {
+  min-width: 0;
+  display: flex;
+  width: auto;
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.graph-container{
+  width: 100%;
+  height: calc(100% - 130px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#output-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.weather-info p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.medium-text {
+  font-size: 24px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.x-axis {
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.x-axis-title {
+  font-size: 18px;
+  padding-top: 10px;
 }
